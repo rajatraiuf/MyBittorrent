@@ -71,6 +71,7 @@ public class StartRemotePeers {
 				
 				// If your program is C/C++, use this line instead of the above line. 
 				//Runtime.getRuntime().exec("ssh " + pInfo.peerAddress + " cd " + path + "; ./peerProcess " + pInfo.peerId);
+				break;
 			}		
 			System.out.println("Starting all remote peers has done." );
 
