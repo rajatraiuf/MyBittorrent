@@ -53,7 +53,7 @@ public class StartRemotePeers {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
-			StartPeers myStart = new StartPeers();
+			StartRemotePeers myStart = new StartRemotePeers();
 			myStart.getConfiguration();
 					
 			// get current path
