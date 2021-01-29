@@ -1,4 +1,4 @@
-package p2pFileSharing;
+// package p2pFileSharing;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,9 +13,9 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 
-public class StartRemotePeers {
+public class StartPeers {
 
-    private static final String scriptPrefix = "java p2pFileSharing/peerProcess ";
+    private static final String scriptPrefix = "java peerProcess ";
 
     public static class PeerInfo {
 
@@ -50,7 +50,7 @@ public class StartRemotePeers {
 
         ArrayList<PeerInfo> peerList = new ArrayList<>();
 
-        String ciseUser = "rajatrai"; // change with your CISE username
+        String ciseUser = "rai"; // change with your CISE username
 
         /**
          * Make sure the below peer hostnames and peerIDs match those in PeerInfo.cfg in
@@ -72,7 +72,9 @@ public class StartRemotePeers {
                  * within your remote CISE machine to ssh into it without a password. Or you can
                  * use the corressponding method of JSch which accepts a password.
                  */
-                jsch.addIdentity("C:\\Users\\vazra\\.ssh\\private", "");
+                
+                jsch.addIdentity("/cise/homes/rai/.ssh/id_rsa", "");
+                // jsch.addIdentity("C:\\Users\\Rajat Rai\\.ssh\\id_rsa", "");
                 Session session = jsch.getSession(ciseUser, remotePeer.getHostName(), 22);
                 Properties config = new Properties();
                 config.put("StrictHostKeyChecking", "no");
