@@ -1,6 +1,7 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "startpeers-from-students/lib/jsch-0.1.55.jar"
+        "startpeers-from-students/lib/jsch-0.1.55.jar",
+        "startpeers-from-students/jsch-0.1.55.jar"
     ]
 }
